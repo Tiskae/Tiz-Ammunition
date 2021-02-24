@@ -1,0 +1,15 @@
+#body-container {
+  background-color: $color-white;
+  display: grid;
+  grid-template-columns:
+    [sidebar-start] 15rem [sidebar-end full-start] minmax(2vw, 5vw)
+    repeat(2, [main-start] 1fr [main-end]) minmax(2vw, 5vw) [full-end];
+  grid-template-rows: repeat(5, min-content);
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns:
+      [full-start] minmax(2vw, 5vw)
+      repeat(2, [main-start] 1fr [main-end]) minmax(2vw, 5vw) [full-end];
+    grid-template-rows: repeat(7, min-content);
+  }
+}

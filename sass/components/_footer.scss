@@ -1,0 +1,50 @@
+.section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background-color: $color-primary;
+  position: fixed;
+  width: 15rem;
+  bottom: 0;
+  padding-top: 0;
+
+  @media only screen and (max-width: $bp-mobile) {
+    position: relative;
+    width: 100vw;
+    padding-top: 2.5rem;
+  }
+
+  .copyright-text {
+    width: 70%;
+    text-align: center;
+    color: $color-grey;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+
+.contact {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-gap: 2.5rem;
+  }
+
+  &__icon {
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: #fff;
+    transition: all .2s;
+
+    &:hover {
+      fill: $color-grey;
+    }
+  }
+}

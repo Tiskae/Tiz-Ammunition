@@ -1,0 +1,164 @@
+// NAVIGATION ////////////////////////////////////////////////
+
+.section-navigation {
+  grid-column: sidebar-start / span 1;
+  grid-row: 1 / span 3;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-column: full-start / full-end;
+    grid-row: 1 / span 1;
+  }
+}
+
+// HEADER ////////////////////////////////////////////////
+
+.section-header {
+  background-color: rgba($color-primary, 0.7);
+  grid-column: full-start / full-end;
+  height: 80vh;
+  padding: 6rem;
+  background-image: url("../img/Hero-x2.jpg");
+  background-size: cover;
+  display: flex;
+  padding-bottom: 10rem;
+  align-items: center;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);
+
+  // @media only screen and (-webkit-min-resolution: 144dpi),
+  //   only screen and (min-resolution: 144dpi),
+  //   only screen and (-webkit-min-device-pixel-ratio: 2),
+  //   only screen and (min-width: 40em) {
+  //   background-image: url("../img/Hero-x2.jpg");
+  // }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 2 / span 1;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 100%, 0 95%);
+    background-position: center;
+    padding: 2rem;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(white, 0.8),
+        transparent
+      ),
+      url("../img/Hero-x1.jpg");
+    margin-top: 2.8rem;
+    padding-top: 2.5rem;
+  }
+  .paragraph {
+    letter-spacing: 1.55rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+// FEATURES ////////////////////////////////////////////////
+
+.section-features {
+  grid-column: main-start / span 2;
+  grid-row: 2 / span 1;
+  padding: 8rem 0;
+
+  @media only screen and (max-width: $bp-mobile) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 3 / span 1;
+  }
+
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(
+      to right,
+      rgb(161, 236, 161),
+      rgb(0, 12, 0)
+    );
+    width: 100%;
+    justify-self: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1rem 1rem 2rem rgba(black, 0.3);
+  }
+
+  .btn {
+    display: block;
+  }
+}
+
+// JUST IN ////////////////////////////////////////////////
+
+.section-just-in {
+  background-image: linear-gradient(rgba(#fff, 0.9), rgba(#fff, 0.9)),
+    url("../img/camo-1.jpg");
+  border-top: 2px dotted $color-grey;
+  grid-column: main-start / span 2;
+  grid-row: 3 / span 1;
+  // clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);
+  text-align: center;
+  padding: 4rem 0rem;
+  margin-bottom: 5rem;
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 4 / span 1;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 27rem));
+  justify-content: center;
+  grid-gap: 4em;
+  justify-content: center;
+
+  h2 {
+    grid-column: 1 / -1;
+  }
+}
+
+// TESTIMONY ////////////////////////////////////////////////
+
+.section-testimony {
+  display: none;
+  background-color: $color-primary-light;
+  padding: 4rem;
+  // grid-column: main-start / span 2;
+  // grid-row: 4 / span 1;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 5 / span 1;
+  }
+}
+
+// // GALLERY ////////////////////////////////////////////////
+
+.section-gallery {
+  background-color: $color-primary;
+  grid-column: main-start / span 2;
+  grid-row: 5 / span 1;
+  margin-bottom: 4rem;
+}
+
+// footer ////////////////////////////////////////////////
+
+.section-footer {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 3 / -1;
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-column: full-start / full-end;
+    grid-row: 6 / span 1;
+  }
+}

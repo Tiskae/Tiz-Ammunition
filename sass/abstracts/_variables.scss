@@ -1,0 +1,39 @@
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #073107;
+$color-primary-light: #20c920;
+$color-grey: #ccc;
+$color-grey-dark: #777;
+
+$bp-mobile: 50em; // 800px🙂
+
+$color-secondary: yellow;
+
+@keyframes glow {
+  0% {
+    color: $color-primary;
+    transform: translateX(0) skew(0) scale(1);
+    text-shadow: none;
+  }
+
+  50% {
+    color: $color-primary-light;
+    transform: translateX(3rem) skew(10deg) scale(1.05);
+    text-shadow: 0 0.5rem 0.5rem rgba(#000, 0.5);
+  }
+
+  100% {
+    color: $color-primary;
+    transform: translateX(0) skew(0) scale(1);
+    text-shadow: none;
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

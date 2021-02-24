@@ -1,0 +1,137 @@
+.mobile-nav {
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+  }
+}
+
+.section-navigation {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / span 1;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section-products {
+  
+  grid-column: full-start/ full-end;
+  grid-row: 1 / span 2;
+  
+  &--100vh {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(#fff, 0.9), rgba(#fff, 0.9)),
+    url("../img/camo-1.jpg");
+  }
+  
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+    margin-top: 2.8rem;
+    padding-top: 2.5rem;
+  }
+}
+
+.section-footer {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 2 / span 1;
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 3 / span 1;
+    grid-column: full-start / full-end;
+  }
+}
+
+// ////////////////////////////////////////////////////
+
+.assault-rifles,
+.smgs,
+.lmgs,
+.shotguns,
+.sniper-rifles,
+.secondary,
+.vests,
+.grenades,
+.medics,
+.vehicles {
+  background-image: linear-gradient(rgba(#fff, 0.9), rgba(#fff, 0.9)),
+    url("../img/camo-1.jpg");
+  border-top: 2px dotted $color-primary;
+  margin-top: 4rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-gap: 4rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-mobile) {
+    padding: 3rem;
+    margin-top: 8rem;
+  }
+
+  .section-heading {
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+
+    @media only screen and (min-width: $bp-mobile) {
+      clip-path: polygon(
+        0 50%,
+        30% 0,
+        70% 0,
+        100% 50%,
+        70% 100%,
+        30% 100%,
+        0 50%
+      );
+
+      background-image: linear-gradient(
+          to right,
+          transparent,
+          transparent,
+          rgba(#fff, 1),
+          transparent,
+          transparent
+        ),
+        url("../img/camo-1.jpg");
+    }
+
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  .card {
+    justify-items: center;
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+
+      span {
+        text-transform: lowercase !important;
+      }
+    }
+
+    &__btn {
+      justify-self: stretch;
+    }
+  }
+}
+
+.assault-rifles,
+.vests,
+.grenades,
+.medics,
+.vehicles {
+  border: none;
+  margin-top: 0;
+}
+

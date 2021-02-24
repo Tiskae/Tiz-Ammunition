@@ -1,0 +1,11 @@
+#body-container {
+  display: grid;
+  grid-template-columns: [sidebar-start] 15rem [sidebar-end full-start] 1fr [full-end];
+  grid-template-rows: repeat(2, min-content);
+  
+  @media only screen and (max-width: $bp-mobile) {
+    background-image: url("../img/camo-1.jpg");
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-rows: repeat(3, min-content);
+  }
+}

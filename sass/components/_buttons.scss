@@ -1,0 +1,24 @@
+.btn {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    color: $color-primary;
+    background-color: $color-white;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+}

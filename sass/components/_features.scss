@@ -1,0 +1,59 @@
+.feature {
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 22.5rem));
+    justify-content: center;
+    grid-gap: 2vw;
+
+    @media only screen and (min-width: 60.3em) and (max-width: 78.2em) {
+      grid-template-columns: repeat(2, minmax(20rem, 25rem));
+      grid-gap: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+      grid-gap: 3.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+    }
+  }
+
+  &__box {
+    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+    padding: 4rem 1rem;
+    background-image: linear-gradient(
+        rgba($color-primary, 0.7),
+        rgba($color-primary, 0.7)
+      ),
+      url("../img/camo-1.jpg");
+    // clip-path: polygon();
+    text-align: center;
+    transition: 0.4s;
+
+    @media only screen and (max-width: $bp-mobile) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @media only screen and (hover: hover) {
+      &:hover {
+        transform: translateY(-1.5rem);
+      }
+
+      &:hover ~ * {
+        filter: brightness(0.5) blur(2px);
+      }
+    }
+
+    &--heading-box {
+      background-color: white;
+    }
+
+    h3 {
+      color: $color-primary;
+    }
+
+    p {
+      color: $color-white;
+      text-transform: lowercase;
+      font-size: 1.3rem;
+    }
+  }
+}
