@@ -14,6 +14,18 @@
       grid-gap: 3.5rem;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
     }
+
+    @media only screen and (hover: hover) {
+      &:hover {
+        .feature__box:hover {
+          transform: translateY(-1.5rem);
+        }
+
+        .feature__box:not(:hover) {
+          filter: brightness(0.5) blur(2px);
+        }
+      }
+    }
   }
 
   &__box {
@@ -24,22 +36,11 @@
         rgba($color-primary, 0.7)
       ),
       url("../img/camo-1.jpg");
-    // clip-path: polygon();
     text-align: center;
     transition: 0.4s;
 
     @media only screen and (max-width: $bp-mobile) {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    @media only screen and (hover: hover) {
-      &:hover {
-        transform: translateY(-1.5rem);
-      }
-
-      &:hover ~ * {
-        filter: brightness(0.5) blur(2px);
-      }
     }
 
     &--heading-box {

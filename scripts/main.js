@@ -1,3 +1,7 @@
+"use strict";
+
+///////////////////////////////////////////////////////////////
+// Variables
 const modalDummy = document.querySelector(".modal-dummy");
 const modalDummyCancelBtn = document.querySelector(".modal-dummy__cancel");
 const backdrop = document.querySelector(".backdrop");
@@ -13,6 +17,8 @@ const nav = document.querySelector(".section-navigation");
 const menuBarBtn = document.querySelector(".mobile-nav__menu-bar");
 const menuIcons = document.querySelectorAll(".mobile-nav__menu-icon");
 
+///////////////////////////////////////////////////////////
+// Functions
 function hideNotice() {
   modalNotice.classList.add("invisible");
 }
@@ -90,6 +96,8 @@ function backdropClickHandler() {
   hideNav();
 }
 
+//////////////////////////////////////////////////////////////////////////
+// Event listeners
 if (modalNoticeAcceptBtn !== null) {
   modalNoticeAcceptBtn.addEventListener("click", hideNotice);
 }

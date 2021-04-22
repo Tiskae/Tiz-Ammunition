@@ -1,5 +1,4 @@
 // NAVIGATION ////////////////////////////////////////////////
-
 .section-navigation {
   grid-column: sidebar-start / span 1;
   grid-row: 1 / span 3;
@@ -17,7 +16,6 @@
 }
 
 // HEADER ////////////////////////////////////////////////
-
 .section-header {
   background-color: rgba($color-primary, 0.7);
   grid-column: full-start / full-end;
@@ -30,13 +28,6 @@
   align-items: center;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);
-
-  // @media only screen and (-webkit-min-resolution: 144dpi),
-  //   only screen and (min-resolution: 144dpi),
-  //   only screen and (-webkit-min-device-pixel-ratio: 2),
-  //   only screen and (min-width: 40em) {
-  //   background-image: url("../img/Hero-x2.jpg");
-  // }
 
   @media only screen and (max-width: $bp-mobile) {
     grid-row: 2 / span 1;
@@ -63,7 +54,6 @@
 }
 
 // FEATURES ////////////////////////////////////////////////
-
 .section-features {
   grid-column: main-start / span 2;
   grid-row: 2 / span 1;
